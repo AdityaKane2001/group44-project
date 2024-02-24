@@ -21,8 +21,9 @@ Our project aims to develop a machine learning recommendation system that person
 
 
 # Contribution table
-|           Task            |   Contributor   |
-| :-----------------------: | :-------------: |
+
+|           Task           |   Contributor   |
+|:-----------------------|:-------------|
 |     Problem Statement     |  Aditya, Urvi   |
 |     Potential Dataset     | Andrew, Aditya  |
 |     Literature Review     | Sanjana, Aditya |
