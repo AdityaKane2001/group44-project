@@ -54,7 +54,9 @@ S. Maharjan, M. Montes, F. A. González, and T. Solorio, "A Genre-Aware Attentio
 A. Sobkowicz, M. Kozłowski, and P. Buczkowski, "Reading Book by the Cover—Book Genre Detection Using Short Descriptions," in A. Gruca, T. Czachórski, K. Harezlak, S. Kozielski, A. Piotrowska, Eds., Man-Machine Interactions 5. ICMMI 2017. Advances in Intelligent Systems and Computing, vol. 659, Springer, Cham, 2018. https://doi.org/10.1007/978-3-319-67792-7_43. 
 
  
+## Gantt chart
 
+<object data="assets/css/ML_GanttChart.pdf" width="1000" height="1000" type='application/pdf'></object>
 
 ## Contribution table
 
