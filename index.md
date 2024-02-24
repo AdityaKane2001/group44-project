@@ -14,7 +14,7 @@ Dataset Link: [CMU Book Summary Dataset](https://www.kaggle.com/datasets/ymarica
 
 ## Problem statement
 
-Our project aims to develop a natural language system to classify book genres from text summaries and further build a recommendation engine to suggest books based on user’s preferences. 
+Our project aims to develop a natural language system to classify book genres from text summaries and further build a recommendation engine to suggest books based on summaries. 
 
  
 
