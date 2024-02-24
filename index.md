@@ -56,7 +56,7 @@ A. Sobkowicz, M. Kozłowski, and P. Buczkowski, "Reading Book by the Cover—Boo
  
 ## Gantt chart
 
-<object data="assets/css/ML_GanttChart.pdf" width="1000" height="1000" type='application/pdf'></object>
+<object data="assets/css/ML_GanttChart_2.pdf" width="1000" height="500" type='application/pdf'>Gantt chart</object>
 
 ## Contribution table
 
