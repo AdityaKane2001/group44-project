@@ -4,9 +4,35 @@ layout: main
 # Introduction and Background
 
 
+# Problem statement
+<!-- 
+<div style="text-align: center">
+    To develop a machine learning recommendation system that personalizes book suggestions by analyzing summaries and recognizing multiple genres
+</div> -->
+
+Our project aims to develop a machine learning recommendation system that personalizes book suggestions by analyzing summaries and recognizing multiple genres, enhancing book discovery and genre visual cues understanding, to better match users with preferred entertainment. 
+
+# Method
+
+# Potential results and discussion
+
+# References
 
 
 
+# Contribution table
+|           Task            |   Contributor   |
+| :-----------------------: | :-------------: |
+|     Problem Statement     |  Aditya, Urvi   |
+|     Potential Dataset     | Andrew, Aditya  |
+|     Literature Review     | Sanjana, Aditya |
+| Exploratory Data Analysis |       All       |
+|        Methodology        |     Dhruval     |
+|     Potential Results     |     Andrew      |
+|    Setup GitHub Pages     |  Aditya, Urvi   |
+|        Gantt Chart        |      Urvi       |
+|    Contribution Table     |     Sanjana     |
+|      Video Recording      |     Andrew      |
 
 
 <!-- ---
