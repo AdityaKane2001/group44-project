@@ -24,7 +24,7 @@ For the summary text, we began by applying some natural language processing. Wit
 
  
 
-Using the vectorized book summary, we can finally train classification models to predict genre. The fact that our data contains more than 2 classes and the fact that each book can have more than 1 genre makes our problem more complex compared to a standard binary classification problem. We take a one vs. all approach for each of the classes. The 2 classifier models that yielded the best results for us are the logistic regression and random forest models. We will present the performance of each combination of the 2 vectorizers and 2 classifiers. In the next section we will present 12 F-1 scores in total – for each vectorizer and classifier combination and for each of the 3 classes.
+Using the vectorized book summary, we can finally train classification models to predict genre. The fact that our data contains more than 2 classes and the fact that each book can have more than 1 genre makes our problem more complex compared to a standard binary classification problem. We take a one vs. all approach for each of the classes. The 2 classifier models that yielded the best results for us are the logistic regression and random forest models. We will present the performance of each combination of the 2 vectorizers and 2 classifiers. In the next section we will present 12 F1 scores in total – for each vectorizer and classifier combination and for each of the 3 classes.
 
 ## Results and Discussion 
 
