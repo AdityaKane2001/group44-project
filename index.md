@@ -31,6 +31,7 @@ Using the vectorized book summary, we can finally train classification models to
 ### Class-wise F1 score
 
 **Fiction**
+
 |        | Logistic Regression | Random Forest |
 | :------: | :-------------------: | :-------------: |
 | GloVe  | 87.68               | 87.78         |
@@ -39,6 +40,7 @@ Using the vectorized book summary, we can finally train classification models to
 
 
 **Literature**
+
 |        | Logistic Regression | Random Forest |
 | :------: | :-------------------: | :-------------: |
 | GloVe  | 55.10               | 55.97         |
@@ -46,6 +48,7 @@ Using the vectorized book summary, we can finally train classification models to
 
 
 **Thriller**
+
 |        | Logistic Regression | Random Forest |
 | :------: | :-------------------: | :-------------: |
 | GloVe  | 62.36               | 61.48         |
@@ -53,6 +56,7 @@ Using the vectorized book summary, we can finally train classification models to
 
 
 **Average across classes**
+
 |        | Logistic Regression | Random Forest |
 | :------: | :-------------------: | :-------------: |
 | GloVe  | 68.38               | 68.41         |
