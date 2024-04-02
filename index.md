@@ -34,7 +34,7 @@ Using the vectorized book summary, we can finally train classification models to
 
 |        | Logistic Regression | Random Forest |
 | :------: | :-------------------: | :-------------: |
-| GloVe  | 87.68               | 87.78         |
+| GloVe  | 86.16               | 87.86         |
 | TF-IDF | 87.43               | 88.38         |
 
 
@@ -43,7 +43,7 @@ Using the vectorized book summary, we can finally train classification models to
 
 |        | Logistic Regression | Random Forest |
 | :------: | :-------------------: | :-------------: |
-| GloVe  | 55.10               | 55.97         |
+| GloVe  | 47.9               | 56.68         |
 | TF-IDF | 43.19               | 29.52         |
 
 
@@ -51,7 +51,7 @@ Using the vectorized book summary, we can finally train classification models to
 
 |        | Logistic Regression | Random Forest |
 | :------: | :-------------------: | :-------------: |
-| GloVe  | 62.36               | 61.48         |
+| GloVe  | 55.98               | 61.42         |
 | TF-IDF | 59.21               | 60.54         |
 
 
@@ -59,7 +59,7 @@ Using the vectorized book summary, we can finally train classification models to
 
 |        | Logistic Regression | Random Forest |
 | :------: | :-------------------: | :-------------: |
-| GloVe  | 68.38               | 68.41         |
+| GloVe  | 63.38               |  68.65        |
 | TF-IDF | 59.48               | 63.27         |
 
 Our models perform decently well to predict book genres from their summaries. GloVe embeddings combined with Random Forest classifier yielded the best overall performance. However, further fine-tuning and experimentation with other techniques could potentially improve the classification accuracy, especially for the less dominant genres such as literature and thriller. 
