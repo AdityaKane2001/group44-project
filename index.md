@@ -102,4 +102,4 @@ The word cloud of the thriller genre shows that words “find”, “kill”, an
 
 ## Gantt chart
 
-<object data="assets/Midterm_ML_GanttChart.pdf" width="1000" height="500" type='application/pdf'>Gantt chart</object>
+<object data="assets/ML_GanttChart_midterm.pdf" width="1000" height="500" type='application/pdf'>Gantt chart</object>
