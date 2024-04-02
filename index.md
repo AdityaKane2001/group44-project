@@ -32,7 +32,7 @@ Using the vectorized book summary, we can finally train classification models to
 
 **Fiction**
 |        | Logistic Regression | Random Forest |
-| ------ | ------------------- | ------------- |
+| :------: | :-------------------: | :-------------: |
 | GloVe  | 87.68               | 87.78         |
 | TF-IDF | 87.43               | 88.38         |
 
@@ -40,21 +40,21 @@ Using the vectorized book summary, we can finally train classification models to
 
 **Literature**
 |        | Logistic Regression | Random Forest |
-| ------ | ------------------- | ------------- |
+| :------: | :-------------------: | :-------------: |
 | GloVe  | 55.10               | 55.97         |
 | TF-IDF | 43.19               | 29.52         |
 
 
 **Thriller**
 |        | Logistic Regression | Random Forest |
-| ------ | ------------------- | ------------- |
+| :------: | :-------------------: | :-------------: |
 | GloVe  | 62.36               | 61.48         |
 | TF-IDF | 59.21               | 60.54         |
 
 
 **Average across classes**
 |        | Logistic Regression | Random Forest |
-| ------ | ------------------- | ------------- |
+| :------: | :-------------------: | :-------------: |
 | GloVe  | 68.38               | 68.41         |
 | TF-IDF | 59.48               | 63.27         |
 
