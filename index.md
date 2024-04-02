@@ -70,22 +70,27 @@ Exploring alternative word embedding techniques (e.g., Word2Vec, FastText) or cl
 ## Visualizations
 
 ![Number of books](assets/Number_Books.png)
+_Figure 1: Genre frequency_
 
 The graph shows the number of books in each genre. The graph shows that fiction has the greatest number of books. We can see that we have very imbalanced classes in our data. 
 
 ![Publication Year](assets/Pub_Year.png)
+_Figure 2: Genre Publishing Frequency Over Time_
 
 This time series graph displays the number of books published over time in the three most popular genres: “fiction”, “thriller”, and “literature”. 
 
 ![Fiction](assets/Fiction.png)
+_Figure 3: Word cloud of Fiction Genre_
 
 This word cloud displays the most popular words in the summaries of all the books in the fiction genre. The three most common words are “find”, “kill”, and “take”. 
 
 ![Literature](assets/Literature.png)
+_Figure 4: Word cloud of Literature Genre_
 
 The word cloud of the literature genre shows that words “find”, “go”, “one” and “tell” are the most repeated words among all the books in the genre. 
 
 ![Thriller](assets/Thriller.png)
+_Figure 5: Word cloud of Thriller Genre_
 
 The word cloud of the thriller genre shows that words “find”, “kill”, and “one” are the most repeated words among all the books in the genre. From Figure 3, 4, and 5, we can see there are overlaps in the set of commonly occurring words. Words like “kill” and “make” occur frequently in 2 of the 3 classes. This pattern can make it difficult for an algorithm to discern between the 2 classes. 
 
