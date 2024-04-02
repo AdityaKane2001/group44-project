@@ -43,7 +43,7 @@ Using the vectorized book summary, we can finally train classification models to
 
 |        | Logistic Regression | Random Forest |
 | :------: | :-------------------: | :-------------: |
-| GloVe  | 47.9               | 56.68         |
+| GloVe  | 47.99               | 56.68         |
 | TF-IDF | 43.19               | 29.52         |
 
 
