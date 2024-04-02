@@ -9,7 +9,7 @@ The goal of the project is to develop a system that recommends books tailored to
 
  
 
-Dataset Link: \[CMU Book Summary Dataset\](https://www.kaggle.com/datasets/ymaricar/cmu-book-summary-dataset)
+Dataset Link: [CMU Book Summary Dataset](https://www.kaggle.com/datasets/ymaricar/cmu-book-summary-dataset)
 
 
 ## Problem statement
@@ -37,19 +37,19 @@ For evaluating supervised learning models, we can begin with the F1-score. We ma
 
 ## References
 
-\[1\] Genre Classification Using Character Networks: 
+[1] Genre Classification Using Character Networks: 
 
 R. Rahul, A. Ayush, D. Agarwal, and D. Vijay, "Genre Classification using Character Networks," in Proc. 5th Int. Conf. Intelligent Computing and Control Systems (ICICCS), Madurai, India, 2021, pp. 216-222. doi: 10.1109/ICICCS51141.2021.9432303. 
 
  
 
-\[2\] A Genre-Aware Attention Model to Improve the Likability Prediction of Books: 
+[2] A Genre-Aware Attention Model to Improve the Likability Prediction of Books: 
 
 S. Maharjan, M. Montes, F. A. González, and T. Solorio, "A Genre-Aware Attention Model to Improve the Likability Prediction of Books," in Proc. of the 2018 Conf. on Empirical Methods in Natural Language Processing (EMNLP), Brussels, Belgium, 2018, pp. 3381-3391. 
 
  
 
-\[3\] Reading Book by the Cover—Book Genre Detection Using Short Descriptions 
+[3] Reading Book by the Cover—Book Genre Detection Using Short Descriptions 
 
 A. Sobkowicz, M. Kozłowski, and P. Buczkowski, "Reading Book by the Cover—Book Genre Detection Using Short Descriptions," in A. Gruca, T. Czachórski, K. Harezlak, S. Kozielski, A. Piotrowska, Eds., Man-Machine Interactions 5. ICMMI 2017. Advances in Intelligent Systems and Computing, vol. 659, Springer, Cham, 2018. https://doi.org/10.1007/978-3-319-67792-7_43. 
 
@@ -80,7 +80,7 @@ layout: default
 
 Text can be **bold**, _italic_, or ~~strikethrough~~.
 
-\[Link to another page\](./another-page.html).
+[Link to another page](./another-page.html).
 
 There should be whitespace between paragraphs.
 
@@ -170,11 +170,11 @@ end
 
 ### Small image
 
-!\[Octocat\](https://github.githubassets.com/images/icons/emoji/octocat.png)
+![Octocat](https://github.githubassets.com/images/icons/emoji/octocat.png)
 
 ### Large image
 
-!\[Branching\](https://guides.github.com/activities/hello-world/branching.png)
+![Branching](https://guides.github.com/activities/hello-world/branching.png)
 
 
 ### Definition lists can be used with HTML syntax.
