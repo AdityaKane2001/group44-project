@@ -94,6 +94,29 @@ _Figure 5: Word cloud of Thriller Genre_
 
 The word cloud of the thriller genre shows that words “find”, “kill”, and “one” are the most repeated words among all the books in the genre. From Figure 3, 4, and 5, we can see there are overlaps in the set of commonly occurring words. Words like “kill” and “make” occur frequently in 2 of the 3 classes. This pattern can make it difficult for an algorithm to discern between the 2 classes. 
 
+
+## Topic-Based Recommendation/Unsupervised Learning 
+
+After building our LDA model with 56 topics and coherence score of 0.446, we use the pyLDAvis package to visualize the topics.
+
+![LDA1](assets/LDA_topic_map.png)
+
+The above figure displays the map between the 56 topics modelled by LDA. The sizes of the circles represent how common the topic is, and the proximity of circles represents how similar the topics are to each other. We can see that some topics, like Topic 3, are very distinct while other topics have many overlaps. Past the first 30 topics, the topic prevalence visually is quite small. We chose to the number of topics based on the coherence score, but perhaps it may be appropriate to include some limit based on topic prevalence if we were to repeat this analysis in the future. 
+
+
+The above figures display the most relevant terms in 2 example topics: Topic 3 and Topic 8. The visualizations display the within topic term frequency compared to the overall frequency of the term in the corpus. Inherently, we do not have a label for each topic, but we can infer what each topic is about by looking at the relevant terms. For example, Topic 3 seems to be related to science fiction, space, and interstellar warfare. Topic 8 seems to be related to history, specifically World War II perhaps.  
+
+ 
+
+This result is valuable because it allows us to interpret the topics that the LDA algorithm produced and think about why certain books may be assigned to the same topic. This allows us to recommend books to readers based on the topic that they enjoy. This is distinct from recommending books based on genre. For example, a reader may enjoy a historic fiction novel based on WWII as well as a nonfiction book that is informative about WWII. The genre of those two books may be different, but the LDA approach could identify the two books as having the same topic. Unlike our supervised learning models, LDA allows us to use an unsupervised approach to group books independent of genre or any other characteristic. Compared to other possible recommendation algorithms, the application of LDA for recommendation has advantages over collaborative filtering approaches in that LDA only uses summary information which makes it viable for brand new books and does not require any user rating data.   
+
+ ![LDA2](assets/topic3_words.png)
+ ![LDA3](assets/topic8_words.png)
+
+
+Although some like Topic 3 and Topic 8 were very distinct, some topics were not very informative and filled with overly common words and/or names of characters. If we were to repeat the LDA analysis again in the future, processing out certain proper nouns may help make each topic more distinct and informative. We can make exceptions for historical figures since unlike the names of fictional characters, the names of historical figures may be helpful in identifying the topic of a book. We can also introduce limits on terms based on document frequency in addition to the stopword removal to further cut down the number of non-unique terms.  
+
+
 ## Contribution Table 
 
 |               Task               |       Contributor        |
@@ -108,8 +131,8 @@ The word cloud of the thriller genre shows that words “find”, “kill”, an
 |          Visualizations          | Andrew, Sanjana, Dhruval |
 |   Quantitative Scoring Metric    |          Aditya          |
 | LDA Design and Visualization     |       Sanjana, Urvi      |
-|      LDA Feature Reduction       |      Aditya, Andrew      |
-| LDA Implementation and Evaluation|      Aditya, Andrew      |
+|      LDA Feature Reduction       |         Andrew           |
+| LDA Implementation and Evaluation|         Andrew           |
 | GloVe, TF-IDF, LDA comparison    |           All            |
 |    Video Creation & Recording    |         Sanjana          |
 |          Final Report            |           All            |
