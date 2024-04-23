@@ -107,6 +107,12 @@ The word cloud of the thriller genre shows that words “find”, “kill”, an
 |        Contribution Table        |     Dhruval, Sanjana     |
 |          Visualizations          | Andrew, Sanjana, Dhruval |
 |   Quantitative Scoring Metric    |          Aditya          |
+| LDA Design and Visualization     |       Sanjana, Urvi      |
+|      LDA Feature Reduction       |      Aditya, Andrew      |
+| LDA Implementation and Evaluation|      Aditya, Andrew      |
+| GloVe, TF-IDF, LDA comparison    |           All            |
+|    Video Creation & Recording    |         Sanjana          |
+|          Final Report            |           All            |
 
 
 ## Gantt chart
