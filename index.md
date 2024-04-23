@@ -140,4 +140,4 @@ Although some like Topic 3 and Topic 8 were very distinct, some topics were not 
 
 ## Gantt chart
 
-<object data="assets/ML_GanttChart_midterm.pdf" width="1000" height="500" type='application/pdf'>Gantt chart</object>
+<object data="assets/ML_GanttChart_final.pdf" width="1000" height="500" type='application/pdf'>Gantt chart</object>
