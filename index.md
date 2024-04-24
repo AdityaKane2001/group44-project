@@ -4,7 +4,7 @@ layout: main
 # CS 7641 Group 44 
 
 ## Introduction and Background
-The goal of the project is to develop a system that recommends books tailored to an individual's preferences. With a vast array of books available, choosing one can be challenging. This system aims to simplify the process by using a dataset from Wikipedia that includes information on 16,559 books, such as titles, authors, genres, and summaries. The current literature includes work related to predicting genre of fiction through short Goodreads descriptions (Sobkowicz, Kozlowski & Buczkowski 2017) or from texts of fanfictions (Rahul, Ayush, Agarwal & Vijay 2021) and predicting the likability of books using the book cover images (Maharjan, Montes-y-Gomez, Gonzales & Solorio 2018). By focusing on personal preferences and a wide range of genres, the project addresses the shortcomings of current recommendation systems, which tend to overlook the specific interests of readers and favor popular titles over personalized selections. The intention is to enhance the book-finding experience, making it more enjoyable and efficient for users seeking books that match their tastes. 
+The goal of the project is to develop a system that recommends books tailored to an individual's preferences. With a vast array of books available, choosing one can be challenging. This system aims to simplify the process by using a dataset from Wikipedia that includes information on 16,559 books, such as titles, authors, genres, and summaries. The current literature includes work related to predicting genre of fiction through short Goodreads descriptions (Sobkowicz, Kozlowski & Buczkowski 2017) or from texts of fanfictions (Rahul, Ayush, Agarwal & Vijay 2021) and predicting the likability of books using the book cover images (Maharjan, Montes-y-Gomez, Gonzales & Solorio 2018). By focusing on a wide range of genres and the contents of the summary text, the project addresses the shortcomings of current recommendation systems, which tend to overlook the specific interests of readers and favor popular titles over personalized selections. The intention is to enhance the book-finding experience, making it more enjoyable and efficient for users seeking books that match their tastes.
 
  
 
@@ -20,15 +20,45 @@ Before applying any machine learning algorithms, data preprocessing was necessar
 
  
 
-For the summary text, we began by applying some natural language processing. With the help of the NLTK package, we tokenized the summary text, lemmatized the resulting tokens, and filtered for stopwords included in the NLTK stopwords dictionary. We have used the output to create TF-IDF (Term Frequency-Inverse Document Frequency) vectors. We also tried an alternate vectorizer in a GloVe (Global Vectors for Word Representation) model to create word embeddings. To implement this, we used the pre-trained "glove-wiki-gigaword-50" which was trained on 2 billion Tweets, 27 billion tokens, and 1.2 million vocabularies available on Hugging Face. Currently, we are in the process of learning about BERT (Bidirectional Encoder Representations from Transformers), another method of creating vector representations of text data.  
+For the summary text, we began by applying some natural language processing. With the help of the NLTK package, we tokenized the summary text, lemmatized the resulting tokens, and filtered for stopwords included in the NLTK stopwords dictionary. We have used the output to create TF-IDF (Term Frequency-Inverse Document Frequency) vectors. We also tried an alternate vectorizer in a GloVe (Global Vectors for Word Representation) model to create word embeddings. To implement this, we used the pre-trained "glove-wiki-gigaword-50" which was trained on 2 billion Tweets, 27 billion tokens, and 1.2 million vocabularies available on Hugging Face.  
 
  
 
 Using the vectorized book summary, we can finally train classification models to predict genre. The fact that our data contains more than 2 classes and the fact that each book can have more than 1 genre makes our problem more complex compared to a standard binary classification problem. We take a one vs. all approach for each of the classes. The 2 classifier models that yielded the best results for us are the logistic regression and random forest models. We will present the performance of each combination of the 2 vectorizers and 2 classifiers. In the next section we will present 12 F1 scores in total – for each vectorizer and classifier combination and for each of the 3 classes.
 
 ## Results and Discussion 
+### Exploratory Data Analysis
 
-### Class-wise F1 score
+![Number of books](assets/Number_Books.png)
+_Figure 1: Genre frequency_
+
+The graph shows the number of books in each genre. The graph shows that fiction has the greatest number of books. We can see that we have very imbalanced classes in our data. 
+
+![Publication Year](assets/Pub_Year.png)
+_Figure 2: Genre Publishing Frequency Over Time_
+
+This time series graph displays the number of books published over time in the three most popular genres: “fiction”, “thriller”, and “literature”. 
+
+![Fiction](assets/Fiction.png)
+_Figure 3: Word cloud of Fiction Genre_
+
+This word cloud displays the most popular words in the summaries of all the books in the fiction genre. The three most common words are “find”, “kill”, and “take”. 
+
+![Literature](assets/Literature.png)
+_Figure 4: Word cloud of Literature Genre_
+
+The word cloud of the literature genre shows that words “find”, “go”, “one” and “tell” are the most repeated words among all the books in the genre. 
+
+![Thriller](assets/Thriller.png)
+_Figure 5: Word cloud of Thriller Genre_
+
+The word cloud of the thriller genre shows that words “find”, “kill”, and “one” are the most repeated words among all the books in the genre. From Figure 3, 4, and 5, we can see there are overlaps in the set of commonly occurring words. Words like “kill” and “make” occur frequently in 2 of the 3 classes. This pattern can make it difficult for an algorithm to discern between the 2 classes. 
+
+
+
+### Genre Prediction/Supervised Learning
+
+**Class-wise F1 score:**
 
 **Fiction**
 
@@ -62,40 +92,15 @@ Using the vectorized book summary, we can finally train classification models to
 | GloVe  | 63.38               |  68.65        |
 | TF-IDF | 59.48               | 63.27         |
 
-Our models perform decently well to predict book genres from their summaries. GloVe embeddings combined with Random Forest classifier yielded the best overall performance. However, further fine-tuning and experimentation with other techniques could potentially improve the classification accuracy, especially for the less dominant genres such as literature and thriller. 
+Our models perform decently well to predict book genres from their summaries. GloVe embeddings combined with Random Forest classifier yielded the best overall performance, although logistic regression was not far off. Compared to logistic regression, random forest tends to be more accurate when the data contains imbalanced classes and high dimensionality. This may explain the difference between the performances of our 2 classification models.  
 
-Exploring alternative word embedding techniques (e.g., Word2Vec, FastText) or classifiers (e.g., Support Vector Machines, Gradient Boosting) could provide insights into which combinations work best for our specific task. Additionally, neural network-based architectures, such as recurrent neural networks (RNNs) or transformers, could be explored for their potential to capture sequential information in book summaries and improve classification accuracy. 
+
+
+Further fine-tuning and experimentation with other techniques could potentially improve the classification accuracy, especially for the less dominant genres such as literature and thriller. If we were to repeat this study in the future, exploring alternative word embedding techniques (e.g., Word2Vec, FastText) or classifiers (e.g., Support Vector Machines, Gradient Boosting) could provide insights into which combinations work best for our specific task. Additionally, neural network-based architectures, such as recurrent neural networks (RNNs) or transformers, could be explored for their potential to capture sequential information in book summaries and improve classification accuracy.  
 
  
-## Visualizations
 
-![Number of books](assets/Number_Books.png)
-_Figure 1: Genre frequency_
-
-The graph shows the number of books in each genre. The graph shows that fiction has the greatest number of books. We can see that we have very imbalanced classes in our data. 
-
-![Publication Year](assets/Pub_Year.png)
-_Figure 2: Genre Publishing Frequency Over Time_
-
-This time series graph displays the number of books published over time in the three most popular genres: “fiction”, “thriller”, and “literature”. 
-
-![Fiction](assets/Fiction.png)
-_Figure 3: Word cloud of Fiction Genre_
-
-This word cloud displays the most popular words in the summaries of all the books in the fiction genre. The three most common words are “find”, “kill”, and “take”. 
-
-![Literature](assets/Literature.png)
-_Figure 4: Word cloud of Literature Genre_
-
-The word cloud of the literature genre shows that words “find”, “go”, “one” and “tell” are the most repeated words among all the books in the genre. 
-
-![Thriller](assets/Thriller.png)
-_Figure 5: Word cloud of Thriller Genre_
-
-The word cloud of the thriller genre shows that words “find”, “kill”, and “one” are the most repeated words among all the books in the genre. From Figure 3, 4, and 5, we can see there are overlaps in the set of commonly occurring words. Words like “kill” and “make” occur frequently in 2 of the 3 classes. This pattern can make it difficult for an algorithm to discern between the 2 classes. 
-
-
-## Topic-Based Recommendation/Unsupervised Learning 
+### Topic-Based Recommendation/Unsupervised Learning 
 
 After building our LDA model with 56 topics and coherence score of 0.446, we use the pyLDAvis package to visualize the topics.
 
@@ -134,7 +139,7 @@ Although some like Topic 3 and Topic 8 were very distinct, some topics were not 
 |      LDA Feature Reduction       |         Andrew           |
 | LDA Implementation and Evaluation|         Andrew           |
 | GloVe, TF-IDF, LDA comparison    |           All            |
-|    Video Creation & Recording    |         Sanjana          |
+|    Video Creation & Recording    |     Aditya, Andrew       |
 |          Final Report            |           All            |
 
 
